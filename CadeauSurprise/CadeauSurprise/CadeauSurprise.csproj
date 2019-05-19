@@ -46,15 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Baño.cs" />
     <Compile Include="Clases\Cocina1.cs" />
     <Compile Include="Clases\Cuartos.cs" />
+    <Compile Include="Clases\Dormitorio.cs" />
+    <Compile Include="Clases\Extras.cs" />
+    <Compile Include="Clases\Lavandería.cs" />
     <Compile Include="Clases\LeerArchivo.cs" />
+    <Compile Include="Clases\Sala.cs" />
+    <Compile Include="Cosas\Almohada.cs" />
+    <Compile Include="Cosas\Cosas.cs" />
+    <Compile Include="Cosas\Cuchillo.cs" />
+    <Compile Include="Cosas\Estufa.cs" />
+    <Compile Include="Cosas\Jabón.cs" />
+    <Compile Include="Cosas\Laptop.cs" />
+    <Compile Include="Cosas\Lavadora.cs" />
+    <Compile Include="Cosas\Mesa.cs" />
+    <Compile Include="Cosas\Regadera.cs" />
+    <Compile Include="Cosas\Secadora.cs" />
+    <Compile Include="Cosas\Shampoo.cs" />
+    <Compile Include="Cosas\Silla.cs" />
+    <Compile Include="Cosas\Sillón.cs" />
+    <Compile Include="Cosas\Toalla.cs" />
+    <Compile Include="Cosas\TV.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Burbujas.cs" />
+    <Compile Include="Interfaces\Calentar.cs" />
+    <Compile Include="Interfaces\Encendido.cs" />
+    <Compile Include="Interfaces\Suma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -82,8 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,11 +12,13 @@ namespace CadeauSurprise.Clases
 
         public static void CocinaCorrecta1()
         {
-            Forma.LoseRoomeLife();
+            FormaCuartos.LoseRoomeLife();
+            FormaCuartos.CocinaPanel1.Show();
         }
         public static void CocinaIncorrecta1()
         {
-            Forma.LoseRoomeLife();
+            FormaCuartos.LoseRoomeLife();
+            FormaCuartos.CuartoEquivocado();
         }
     }
 }
