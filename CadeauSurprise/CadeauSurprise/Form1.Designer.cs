@@ -191,6 +191,8 @@
             this.label78 = new System.Windows.Forms.Label();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.BañoPanel = new System.Windows.Forms.Panel();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
@@ -202,15 +204,13 @@
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.label83 = new System.Windows.Forms.Label();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
             this.Stage5Timer = new System.Windows.Forms.Timer(this.components);
             this.Victory = new System.Windows.Forms.Panel();
-            this.label82 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
             this.GameOver = new System.Windows.Forms.Panel();
-            this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenuGift)).BeginInit();
             this.Stage1.SuspendLayout();
@@ -374,8 +374,8 @@
             this.Stage1.Controls.Add(this.label2);
             this.Stage1.Controls.Add(this.pictureBox2);
             this.Stage1.Controls.Add(this.pictureBox3);
-            this.Stage1.Controls.Add(this.label3);
             this.Stage1.Controls.Add(this.pictureBox1);
+            this.Stage1.Controls.Add(this.label3);
             this.Stage1.Location = new System.Drawing.Point(0, 0);
             this.Stage1.Name = "Stage1";
             this.Stage1.Size = new System.Drawing.Size(816, 489);
@@ -2231,6 +2231,33 @@
             this.BañoPanel.TabIndex = 14;
             this.BañoPanel.Visible = false;
             // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label81.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(318, 391);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(138, 25);
+            this.label81.TabIndex = 100;
+            this.label81.Text = "¡CORRECTO!";
+            this.label81.Visible = false;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label80.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(641, 398);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(122, 25);
+            this.label80.TabIndex = 99;
+            this.label80.Text = "Continuar...";
+            this.label80.Visible = false;
+            this.label80.Click += new System.EventHandler(this.label80_Click);
+            this.label80.MouseEnter += new System.EventHandler(this.label80_MouseEnter);
+            this.label80.MouseLeave += new System.EventHandler(this.label80_MouseLeave);
+            // 
             // label75
             // 
             this.label75.AutoSize = true;
@@ -2358,33 +2385,6 @@
             this.pictureBox33.TabIndex = 89;
             this.pictureBox33.TabStop = false;
             // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label80.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(641, 398);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(122, 25);
-            this.label80.TabIndex = 99;
-            this.label80.Text = "Continuar...";
-            this.label80.Visible = false;
-            this.label80.Click += new System.EventHandler(this.label80_Click);
-            this.label80.MouseEnter += new System.EventHandler(this.label80_MouseEnter);
-            this.label80.MouseLeave += new System.EventHandler(this.label80_MouseLeave);
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label81.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(318, 391);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(138, 25);
-            this.label81.TabIndex = 100;
-            this.label81.Text = "¡CORRECTO!";
-            this.label81.Visible = false;
-            // 
             // Stage5Timer
             // 
             this.Stage5Timer.Interval = 10000;
@@ -2401,17 +2401,6 @@
             this.Victory.TabIndex = 15;
             this.Victory.Visible = false;
             // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Maiandra GD", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.label82.Location = new System.Drawing.Point(127, 47);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(538, 115);
-            this.label82.TabIndex = 0;
-            this.label82.Text = "¡GANASTE!";
-            // 
             // label84
             // 
             this.label84.AutoSize = true;
@@ -2422,6 +2411,17 @@
             this.label84.Size = new System.Drawing.Size(564, 77);
             this.label84.TabIndex = 1;
             this.label84.Text = "¡Gracias por jugar!";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Maiandra GD", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.label82.Location = new System.Drawing.Point(127, 47);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(538, 115);
+            this.label82.TabIndex = 0;
+            this.label82.Text = "¡GANASTE!";
             // 
             // GameOver
             // 
@@ -2435,16 +2435,6 @@
             this.GameOver.TabIndex = 16;
             this.GameOver.Visible = false;
             // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Maiandra GD", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(118, 67);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(614, 77);
-            this.label85.TabIndex = 0;
-            this.label85.Text = "Agotaste tus vidas :(";
-            // 
             // label86
             // 
             this.label86.AutoSize = true;
@@ -2455,11 +2445,28 @@
             this.label86.TabIndex = 1;
             this.label86.Text = "¡Vuelve a intentarlo!";
             // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Maiandra GD", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label85.Location = new System.Drawing.Point(118, 67);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(614, 77);
+            this.label85.TabIndex = 0;
+            this.label85.Text = "Agotaste tus vidas :(";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GameOver);
+            this.Controls.Add(this.Victory);
+            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.Stage1);
+            this.Controls.Add(this.Evento1);
+            this.Controls.Add(this.SalaPanel);
+            this.Controls.Add(this.Evento2);
             this.Controls.Add(this.BañoPanel);
             this.Controls.Add(this.Stage6);
             this.Controls.Add(this.DormitorioPanel);
@@ -2470,13 +2477,6 @@
             this.Controls.Add(this.Acertijo);
             this.Controls.Add(this.CocinaPanel1);
             this.Controls.Add(this.Stage2);
-            this.Controls.Add(this.GameOver);
-            this.Controls.Add(this.Victory);
-            this.Controls.Add(this.MainMenu);
-            this.Controls.Add(this.Stage1);
-            this.Controls.Add(this.Evento1);
-            this.Controls.Add(this.SalaPanel);
-            this.Controls.Add(this.Evento2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.MainMenu.ResumeLayout(false);
@@ -2554,16 +2554,13 @@
         #endregion
         private System.Windows.Forms.Label MainMenuGameName;
         private System.Windows.Forms.PictureBox MainMenuGift;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Panel MainMenu;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label8;
@@ -2587,10 +2584,7 @@
         public System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox9;
         public System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.Label Dinero1;
         public System.Windows.Forms.Label Libros1;
         public System.Windows.Forms.Label Dinero0;
@@ -2733,6 +2727,12 @@
         public System.Windows.Forms.Panel GameOver;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.Label label85;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label4;
     }
 }
 

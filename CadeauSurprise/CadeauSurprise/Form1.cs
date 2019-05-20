@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CadeauSurprise.Clases;
 using CadeauSurprise.Cosas;
+using CadeauSurprise.Clases.Agregaciones;
 
 
 namespace CadeauSurprise
@@ -18,7 +19,6 @@ namespace CadeauSurprise
         int RoomCounter = 10;
         int BookCounter = 0;
         int MoneyCounter = 0;
-        string PlayerName;
 
         public Form1()
         {
@@ -149,13 +149,14 @@ namespace CadeauSurprise
                 }
                 else
                 {
-                    label1.Show();
-                    PlayerName = textBox1.Text;
-                    label4.Text = "La mamá de " + PlayerName + " le tiene un regalo sorpresa por su cumpleaños.";
-                    label6.Text = "Tu misión es ayudar a " + PlayerName + " a encontrar su regalo ya que sólo puedes ir a 10 cuartos, si no, su mamá no le dará su regalo.";
-                    button1.Hide();
-                    textBox1.Enabled = false;
-                    textBox2.Enabled = false;
+                    /* label1.Show();
+                     PlayerName = textBox1.Text;
+                     label4.Text = "La mamá de " + PlayerName + " le tiene un regalo sorpresa por su cumpleaños.";
+                     label6.Text = "Tu misión es ayudar a " + PlayerName + " a encontrar su regalo ya que sólo puedes ir a 10 cuartos, si no, su mamá no le dará su regalo.";
+                     button1.Hide();
+                     textBox1.Enabled = false;
+                     textBox2.Enabled = false; */
+                    Clases.Agregaciones.Player.SetPlayerName();
                 }
                     
             }

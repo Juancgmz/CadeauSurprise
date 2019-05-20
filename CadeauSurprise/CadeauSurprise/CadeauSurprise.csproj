@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Agregaciones\Player.cs" />
     <Compile Include="Clases\Cosas\Cama.cs" />
     <Compile Include="Clases\EscribirArchivo.cs" />
     <Compile Include="Clases\Lugares\Baño.cs" />
@@ -108,8 +109,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clases\Agregaciones\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

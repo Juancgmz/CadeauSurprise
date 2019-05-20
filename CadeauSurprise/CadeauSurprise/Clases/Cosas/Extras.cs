@@ -11,6 +11,15 @@ namespace CadeauSurprise.Clases
     {
         public static Form1 FormaExtras = Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
+        public void AdquireMoney()
+        {
+
+        }
+
+        public void AdquireBook()
+        {
+
+        }
 
     }
 }
