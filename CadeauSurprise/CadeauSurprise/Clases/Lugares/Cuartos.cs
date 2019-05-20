@@ -10,5 +10,6 @@ namespace CadeauSurprise.Clases
     abstract class Cuartos
     {
         public static Form1 FormaCuartos = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+
     }
 }

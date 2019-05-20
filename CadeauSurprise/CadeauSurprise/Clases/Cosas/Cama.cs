@@ -7,10 +7,10 @@ using CadeauSurprise.Clases;
 
 namespace CadeauSurprise.Cosas
 {
-    class Regadera : Cosas
+    class Cama : Cosas
     {
-        static string path = FormaCosas.label76.Text;
-        public static void RegaderaPick()
+        static string path = FormaCosas.label64.Text;
+        public static void CamaPick()
         {
             FormaCosas.ObjectError();
             EscribirArchivo.PlayerPath(path);

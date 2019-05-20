@@ -8,16 +8,19 @@ namespace CadeauSurprise.Clases
 {
     class Baño : Cuartos
     {
-        public static void CocinaCorrecta1()
+        static string path = FormaCuartos.label73.Text;
+        public static void BañoCorrecto()
         {
             FormaCuartos.LoseRoomeLife();
-          //  FormaCuartos.Stage6.Hide();
-          //  FormaCuartos.BañoPanel.Show();
+            FormaCuartos.Stage6.Hide();
+            FormaCuartos.BañoPanel.Show();
+            EscribirArchivo.PlayerPath(path);
         }
-        public static void CocinaIncorrecta1()
+        public static void BañoInCorrecto()
         {
             FormaCuartos.LoseRoomeLife();
             FormaCuartos.CuartoEquivocado();
+            EscribirArchivo.PlayerPath(path);
         }
     }
 }

@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CadeauSurprise.Clases;
+using CadeauSurprise.Cosas;
 
 
 namespace CadeauSurprise
 {
     public partial class Form1 : Form
     {
-        int RoomCounter = 15;
+        int RoomCounter = 10;
         int BookCounter = 0;
         int MoneyCounter = 0;
         string PlayerName;
@@ -22,17 +23,17 @@ namespace CadeauSurprise
         public Form1()
         {
             InitializeComponent();
-            var labels = new List<Label> { RoomsN0, RoomsN1, RoomsN2, RoomsN4, RoomsN5 };
+            var labels = new List<Label> { RoomsN0, RoomsN1, RoomsN2, RoomsN4, RoomsN5, RoomsN6, RoomsN7, RoomsN8, RoomsN9, RoomsN10, RoomsN11 };
             foreach (var label in labels)
             {
                 label.Text = RoomCounter.ToString();
             }
-            var labelsD = new List<Label> { Dinero0, Dinero1, Dinero2, Dinero4, Dinero5 };
+            var labelsD = new List<Label> { Dinero0, Dinero1, Dinero2, Dinero4, Dinero5, Dinero6, Dinero7, Dinero8, Dinero9, Dinero10, Dinero11 };
             foreach (var labelD in labelsD)
             {
                 labelD.Text = MoneyCounter.ToString();
             }
-            var labelsB = new List<Label> { Libro0, Libros1, Libros2, Libros4, Libros5 };
+            var labelsB = new List<Label> { Libro0, Libros1, Libros2, Libros4, Libros5, Libros6, Libros7, Libros8, Libros9, Libros10, Libros11 };
             foreach (var labelB in labelsB)
             {
                 labelB.Text = BookCounter.ToString();
@@ -44,12 +45,12 @@ namespace CadeauSurprise
         {
             if(RoomCounter == 0)
             {
-                //GameOver.Show();
+                GameOver.Show();
             }
             else
             {
                 RoomCounter -= 1;
-                var labels = new List<Label> { RoomsN0, RoomsN1, RoomsN2, RoomsN4, RoomsN5 };
+                var labels = new List<Label> { RoomsN0, RoomsN1, RoomsN2, RoomsN4, RoomsN5, RoomsN6, RoomsN7, RoomsN8, RoomsN9, RoomsN10, RoomsN11 };
                 foreach (var label in labels)
                 {
                     label.Text = RoomCounter.ToString();
@@ -60,7 +61,7 @@ namespace CadeauSurprise
         public void AdquireMoney(int gift)
         {
             MoneyCounter += gift;
-            var labelsD = new List<Label> { Dinero0, Dinero1, Dinero2, Dinero4, Dinero5 };
+            var labelsD = new List<Label> { Dinero0, Dinero1, Dinero2, Dinero4, Dinero5, Dinero6, Dinero7, Dinero8, Dinero9, Dinero10, Dinero11 };
             foreach (var labelD in labelsD)
             {
                 labelD.Text = MoneyCounter.ToString();
@@ -70,7 +71,7 @@ namespace CadeauSurprise
         public void AdquireBook()
         {
             BookCounter += 1;
-            var labelsB = new List<Label> { Libro0, Libros1, Libros2, Libros4, Libros5 };
+            var labelsB = new List<Label> { Libro0, Libros1, Libros2, Libros4, Libros5, Libros6, Libros7, Libros8, Libros9, Libros10, Libros11 };
             foreach (var labelB in labelsB)
             {
                 labelB.Text = BookCounter.ToString();
@@ -81,6 +82,7 @@ namespace CadeauSurprise
         {
             MainMenu.Hide();
             Stage1.Show();
+            System.IO.File.WriteAllText(@"C:\Users\JC\Desktop\Cadeau Surprise\PlayerPath.txt", string.Empty);
         }
 
         private void label1_MouseEnter(object sender, EventArgs e)
@@ -150,7 +152,7 @@ namespace CadeauSurprise
                     label1.Show();
                     PlayerName = textBox1.Text;
                     label4.Text = "La mamá de " + PlayerName + " le tiene un regalo sorpresa por su cumpleaños.";
-                    label6.Text = "Tu misión es ayudar a " + PlayerName + "a encontrar su regalo ya que sólo puedes ir a 15 cuartos, si no, su mamá no le dará su regalo.";
+                    label6.Text = "Tu misión es ayudar a " + PlayerName + " a encontrar su regalo ya que sólo puedes ir a 10 cuartos, si no, su mamá no le dará su regalo.";
                     button1.Hide();
                     textBox1.Enabled = false;
                     textBox2.Enabled = false;
@@ -170,6 +172,7 @@ namespace CadeauSurprise
         private void label11_Click(object sender, EventArgs e)
         {
             Cocina1.CocinaCorrecta1();
+            
         }
 
         private void label11_MouseEnter(object sender, EventArgs e)
@@ -421,6 +424,8 @@ namespace CadeauSurprise
             label38.Show();
             label40.Show();
             AdquireMoney(500);
+            string path = label29.Text;
+            EscribirArchivo.PlayerPath(path);
         }
 
         private void label37_Click(object sender, EventArgs e)
@@ -430,6 +435,8 @@ namespace CadeauSurprise
             label39.Show();
             label40.Show();
             AdquireBook();
+            string path = label37.Text;
+            EscribirArchivo.PlayerPath(path);
         }
 
         private void label29_MouseEnter(object sender, EventArgs e)
@@ -661,6 +668,268 @@ namespace CadeauSurprise
         {
             this.Cursor = Cursors.Default;
             label42.Font = new Font(label42.Font.Name, label42.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label51_Click(object sender, EventArgs e)
+        {
+            label61.Show();
+            label63.Show();
+            AdquireBook();
+            label51.Enabled = false;
+            label59.Enabled = false;
+            string path = label51.Text;
+            EscribirArchivo.PlayerPath(path);
+        }
+
+        private void label59_Click(object sender, EventArgs e)
+        {
+            label62.Show();
+            label63.Show();
+            AdquireMoney(100);
+            label51.Enabled = false;
+            label59.Enabled = false;
+            string path = label59.Text;
+            EscribirArchivo.PlayerPath(path);
+        }
+
+        private void label63_Click(object sender, EventArgs e)
+        {
+            Evento2.Hide();
+            Acertijo.Show();
+            Clases.LeerArchivo.LecturaAcertijos(5);
+            Stage5Timer.Enabled = true;
+        }
+
+        private void label51_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label51.Font = new Font(label51.Font.Name, label51.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label51_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label51.Font = new Font(label51.Font.Name, label51.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label59_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label59.Font = new Font(label59.Font.Name, label59.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label59_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label59.Font = new Font(label59.Font.Name, label59.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label63_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label63.Font = new Font(label63.Font.Name, label63.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label63_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label63.Font = new Font(label63.Font.Name, label63.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label68_Click(object sender, EventArgs e)
+        {
+            DormitorioPanel.Hide();
+            Evento2.Show();
+        }
+
+        private void label70_Click(object sender, EventArgs e)
+        {
+            Clases.Dormitorio.DormitorioIncorrecto();
+        }
+
+        private void label72_Click(object sender, EventArgs e)
+        {
+            Clases.Lavandería.LavanderíaIncorrecta1();
+        }
+
+        private void label73_Click(object sender, EventArgs e)
+        {
+            Clases.Baño.BañoCorrecto();
+        }
+
+        private void label73_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label73.Font = new Font(label73.Font.Name, label73.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label73_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label73.Font = new Font(label73.Font.Name, label73.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label72_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label72.Font = new Font(label72.Font.Name, label72.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label72_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label72.Font = new Font(label72.Font.Name, label72.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label70_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label70.Font = new Font(label70.Font.Name, label70.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label70_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label70.Font = new Font(label70.Font.Name, label70.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label75_Click(object sender, EventArgs e)
+        {
+            Cosas.Toalla.ToallaPick();
+        }
+
+        private void label76_Click(object sender, EventArgs e)
+        {
+            Cosas.Regadera.RegaderaPick();
+        }
+
+        private void label77_Click(object sender, EventArgs e)
+        {
+            Cosas.Shampoo.ShampooPick();
+        }
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+            BañoPanel.Hide();
+            Victory.Show();
+        }
+
+        private void label75_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label75.Font = new Font(label75.Font.Name, label75.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label75_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label75.Font = new Font(label75.Font.Name, label75.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label76_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label76.Font = new Font(label76.Font.Name, label76.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label76_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label76.Font = new Font(label76.Font.Name, label76.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label77_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label77.Font = new Font(label77.Font.Name, label77.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label77_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label77.Font = new Font(label77.Font.Name, label77.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label80_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label80.Font = new Font(label80.Font.Name, label80.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label80_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label80.Font = new Font(label80.Font.Name, label80.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void Stage5Timer_Tick(object sender, EventArgs e)
+        {
+            Acertijo.Hide();
+            Stage6.Show();
+            Stage5Timer.Enabled = false;
+        }
+
+        private void label64_Click(object sender, EventArgs e)
+        {
+            Cosas.Cama.CamaPick();
+        }
+
+        private void label65_Click(object sender, EventArgs e)
+        {
+            Cosas.Laptop.LaptopPick();
+        }
+
+        private void label66_Click(object sender, EventArgs e)
+        {
+            Cosas.Almohada.AlmohadaPick();
+        }
+
+        private void label64_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label64.Font = new Font(label64.Font.Name, label64.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label64_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label64.Font = new Font(label64.Font.Name, label64.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label65_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label65.Font = new Font(label65.Font.Name, label65.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label65_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label65.Font = new Font(label65.Font.Name, label65.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label66_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label66.Font = new Font(label66.Font.Name, label66.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label66_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label66.Font = new Font(label66.Font.Name, label66.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label68_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label68.Font = new Font(label68.Font.Name, label68.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label68_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label68.Font = new Font(label68.Font.Name, label68.Font.SizeInPoints, FontStyle.Regular);
         }
     }
 }

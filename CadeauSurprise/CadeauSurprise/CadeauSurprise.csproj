@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cosas\Cama.cs" />
+    <Compile Include="Clases\EscribirArchivo.cs" />
     <Compile Include="Clases\Lugares\Baño.cs" />
     <Compile Include="Clases\Lugares\Cocina1.cs" />
     <Compile Include="Clases\Lugares\Cuartos.cs" />
