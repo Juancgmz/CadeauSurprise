@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace CadeauSurprise.Cosas
 {
-    class Cuchillo : Cosas
+    class Microondas : Cosas
     {
-        public static void CuchilloPick()
+        public static void MicroondasPick()
         {
             FormaCosas.ObjectError();
+        }
+
+        internal static void CuchilloPick()
+        {
+            throw new NotImplementedException();
         }
     }
 }

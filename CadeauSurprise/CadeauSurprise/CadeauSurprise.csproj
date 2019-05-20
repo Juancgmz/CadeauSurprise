@@ -50,13 +50,13 @@
     <Compile Include="Clases\Lugares\Cocina1.cs" />
     <Compile Include="Clases\Lugares\Cuartos.cs" />
     <Compile Include="Clases\Lugares\Dormitorio.cs" />
-    <Compile Include="Clases\Lugares\Extras.cs" />
+    <Compile Include="Clases\Cosas\Extras.cs" />
     <Compile Include="Clases\Lugares\Lavandería.cs" />
     <Compile Include="Clases\Archivos\LeerArchivo.cs" />
     <Compile Include="Clases\Lugares\Sala.cs" />
     <Compile Include="Clases\Cosas\Almohada.cs" />
     <Compile Include="Clases\Cosas\Cosas.cs" />
-    <Compile Include="Clases\Cosas\Cuchillo.cs" />
+    <Compile Include="Clases\Cosas\Microondas.cs" />
     <Compile Include="Clases\Cosas\Estufa.cs" />
     <Compile Include="Clases\Cosas\Jabón.cs" />
     <Compile Include="Clases\Cosas\Laptop.cs" />

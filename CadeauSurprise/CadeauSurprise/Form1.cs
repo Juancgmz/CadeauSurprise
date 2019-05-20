@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CadeauSurprise.Clases;
 
+
 namespace CadeauSurprise
 {
     public partial class Form1 : Form
@@ -277,7 +278,7 @@ namespace CadeauSurprise
 
         private void label18_Click(object sender, EventArgs e)
         {
-            Cosas.Cuchillo.CuchilloPick();
+            Cosas.Microondas.MicroondasPick();
         }
 
         private void Stage2Timer_Tick(object sender, EventArgs e)
@@ -428,6 +429,7 @@ namespace CadeauSurprise
             label37.Enabled = false;
             label39.Show();
             label40.Show();
+            AdquireBook();
         }
 
         private void label29_MouseEnter(object sender, EventArgs e)
@@ -457,6 +459,208 @@ namespace CadeauSurprise
         private void label40_Click(object sender, EventArgs e)
         {
             Evento1.Hide();
+            Acertijo.Show();
+            LeerArchivo.LecturaAcertijos(3);
+            Stage3Timer.Enabled = true;
+        }
+
+        private void label40_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label40.Font = new Font(label40.Font.Name, label40.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label40_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label40.Font = new Font(label40.Font.Name, label40.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void Stage3Timer_Tick(object sender, EventArgs e)
+        {
+            Acertijo.Hide();
+            Stage4.Show();
+            Stage3Timer.Enabled = false;
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+            Clases.Lavandería.LavanderíaIncorrecta1();
+        }
+
+        private void label47_Click(object sender, EventArgs e)
+        {
+            Clases.Dormitorio.DormitorioIncorrecto();
+        }
+
+        private void label48_Click(object sender, EventArgs e)
+        {
+            Clases.Sala.SalaCorrecta1();
+        }
+
+        private void label48_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label48.Font = new Font(label48.Font.Name, label48.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label48_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label48.Font = new Font(label48.Font.Name, label48.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label47_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label47.Font = new Font(label47.Font.Name, label47.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label47_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label47.Font = new Font(label47.Font.Name, label47.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label46_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label46.Font = new Font(label46.Font.Name, label46.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label46_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label46.Font = new Font(label46.Font.Name, label46.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label58_Click(object sender, EventArgs e)
+        {
+            Cosas.Sillón.SillonPick();
+        }
+
+        private void label57_Click(object sender, EventArgs e)
+        {
+            Cosas.TV.TVPick();
+        }
+
+        private void label56_Click(object sender, EventArgs e)
+        {
+            Cosas.Mesa.MesaPick();
+        }
+
+        private void label56_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label56.Font = new Font(label56.Font.Name, label56.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label56_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label56.Font = new Font(label56.Font.Name, label56.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label57_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label57.Font = new Font(label57.Font.Name, label57.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label57_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label57.Font = new Font(label57.Font.Name, label57.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label58_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label58.Font = new Font(label58.Font.Name, label58.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label58_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label58.Font = new Font(label58.Font.Name, label58.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label53_Click(object sender, EventArgs e)
+        {
+            SalaPanel.Hide();
+            Acertijo.Show();
+            LeerArchivo.LecturaAcertijos(4);
+            Stage4Timer.Enabled = true;
+        }
+
+        private void label53_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label53.Font = new Font(label53.Font.Name, label53.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label53_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label53.Font = new Font(label53.Font.Name, label53.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void Stage4Timer_Tick(object sender, EventArgs e)
+        {
+            Acertijo.Hide();
+            Stage5.Show();
+            Stage4Timer.Enabled = false;
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+            Clases.Sala.SalaIncorrecta1();
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+            Clases.Dormitorio.DormitorioCorrecta();
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+            Clases.Lavandería.LavanderíaIncorrecta1();
+        }
+
+        private void label44_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label44.Font = new Font(label44.Font.Name, label44.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label44_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label44.Font = new Font(label44.Font.Name, label44.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label43_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label43.Font = new Font(label43.Font.Name, label43.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label43_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label43.Font = new Font(label43.Font.Name, label43.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label42_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label42.Font = new Font(label42.Font.Name, label42.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label42_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label42.Font = new Font(label42.Font.Name, label42.Font.SizeInPoints, FontStyle.Regular);
         }
     }
 }

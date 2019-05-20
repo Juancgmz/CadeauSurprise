@@ -7,8 +7,10 @@ using System.Windows.Forms;
 
 namespace CadeauSurprise.Clases
 {
-    abstract class Extras
+    public abstract class Extras
     {
         public static Form1 FormaExtras = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+
+
     }
 }

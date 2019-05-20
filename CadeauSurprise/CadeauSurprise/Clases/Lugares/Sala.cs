@@ -11,8 +11,8 @@ namespace CadeauSurprise.Clases
         public static void SalaCorrecta1()
         {
             FormaCuartos.LoseRoomeLife();
-          //  FormaCuartos.Stage4.Hide();
-          //  FormaCuartos.SalaPanel.Show();
+            FormaCuartos.Stage4.Hide();
+            FormaCuartos.SalaPanel.Show();
         }
         public static void SalaIncorrecta1()
         {

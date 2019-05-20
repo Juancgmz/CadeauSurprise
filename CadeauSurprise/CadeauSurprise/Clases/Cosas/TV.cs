@@ -16,7 +16,8 @@ namespace CadeauSurprise.Cosas
 
         public static void TVPick()
         {
-
+            FormaCosas.label54.Show();
+            FormaCosas.label53.Show();
         }
     }
 }
