@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace CadeauSurprise.Clases
 {
-    class Cocina1 : Cuartos
+    class Baño : Cuartos
     {
-
         public static void CocinaCorrecta1()
         {
             FormaCuartos.LoseRoomeLife();
-            FormaCuartos.CocinaPanel1.Show();
+          //  FormaCuartos.Stage6.Hide();
+          //  FormaCuartos.BañoPanel.Show();
         }
         public static void CocinaIncorrecta1()
         {

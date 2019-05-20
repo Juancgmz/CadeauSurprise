@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace CadeauSurprise.Cosas
 {
-    class Almohada : Cosas
+    class Silla : Cosas
     {
-        public static void AlmohadaPick()
+        public static void SillaPick()
         {
+            FormaCosas.label20.Show();
+            FormaCosas.label21.Show();
         }
     }
 }

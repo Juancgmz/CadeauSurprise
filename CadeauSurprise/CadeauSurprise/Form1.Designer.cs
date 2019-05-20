@@ -36,8 +36,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.MainMenuGameName = new System.Windows.Forms.Label();
             this.MainMenuGift = new System.Windows.Forms.PictureBox();
+            this.MainMenuGameName = new System.Windows.Forms.Label();
             this.Stage1 = new System.Windows.Forms.Panel();
             this.Dinero1 = new System.Windows.Forms.Label();
             this.Libros1 = new System.Windows.Forms.Label();
@@ -109,6 +109,14 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.Evento1 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenuGift)).BeginInit();
             this.Stage1.SuspendLayout();
@@ -132,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.Evento1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -142,8 +151,8 @@
             this.MainMenu.Controls.Add(this.label22);
             this.MainMenu.Controls.Add(this.textBox1);
             this.MainMenu.Controls.Add(this.label1);
-            this.MainMenu.Controls.Add(this.MainMenuGameName);
             this.MainMenu.Controls.Add(this.MainMenuGift);
+            this.MainMenu.Controls.Add(this.MainMenuGameName);
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(816, 489);
@@ -209,6 +218,16 @@
             this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
+            // MainMenuGift
+            // 
+            this.MainMenuGift.Image = ((System.Drawing.Image)(resources.GetObject("MainMenuGift.Image")));
+            this.MainMenuGift.Location = new System.Drawing.Point(21, 87);
+            this.MainMenuGift.Name = "MainMenuGift";
+            this.MainMenuGift.Size = new System.Drawing.Size(306, 295);
+            this.MainMenuGift.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MainMenuGift.TabIndex = 0;
+            this.MainMenuGift.TabStop = false;
+            // 
             // MainMenuGameName
             // 
             this.MainMenuGameName.AutoSize = true;
@@ -220,16 +239,6 @@
             this.MainMenuGameName.Size = new System.Drawing.Size(470, 147);
             this.MainMenuGameName.TabIndex = 1;
             this.MainMenuGameName.Text = "Cadeau Surprise";
-            // 
-            // MainMenuGift
-            // 
-            this.MainMenuGift.Image = ((System.Drawing.Image)(resources.GetObject("MainMenuGift.Image")));
-            this.MainMenuGift.Location = new System.Drawing.Point(21, 87);
-            this.MainMenuGift.Name = "MainMenuGift";
-            this.MainMenuGift.Size = new System.Drawing.Size(306, 295);
-            this.MainMenuGift.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.MainMenuGift.TabIndex = 0;
-            this.MainMenuGift.TabStop = false;
             // 
             // Stage1
             // 
@@ -1082,18 +1091,117 @@
             this.pictureBox15.TabIndex = 34;
             this.pictureBox15.TabStop = false;
             // 
+            // Evento1
+            // 
+            this.Evento1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(116)))), ((int)(((byte)(128)))));
+            this.Evento1.Controls.Add(this.label40);
+            this.Evento1.Controls.Add(this.label39);
+            this.Evento1.Controls.Add(this.label38);
+            this.Evento1.Controls.Add(this.label37);
+            this.Evento1.Controls.Add(this.label29);
+            this.Evento1.Controls.Add(this.label28);
+            this.Evento1.Controls.Add(this.label27);
+            this.Evento1.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Evento1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.Evento1.Location = new System.Drawing.Point(0, 0);
+            this.Evento1.Name = "Evento1";
+            this.Evento1.Size = new System.Drawing.Size(816, 489);
+            this.Evento1.TabIndex = 7;
+            this.Evento1.Visible = false;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(641, 402);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(138, 29);
+            this.label40.TabIndex = 6;
+            this.label40.Text = "Continuar...";
+            this.label40.Visible = false;
+            this.label40.Click += new System.EventHandler(this.label40_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(117, 336);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(548, 29);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "Tu amigo Mateo te ha dejado un libro en el buzón.";
+            this.label39.Visible = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(117, 304);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(615, 29);
+            this.label38.TabIndex = 4;
+            this.label38.Text = "¡Era tu amiga Natalia! Te regaló $500 por tu cumpleaños!";
+            this.label38.Visible = false;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(501, 200);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(114, 29);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Ignorarla.";
+            this.label37.Click += new System.EventHandler(this.label37_Click);
+            this.label37.MouseEnter += new System.EventHandler(this.label37_MouseEnter);
+            this.label37.MouseLeave += new System.EventHandler(this.label37_MouseLeave);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Maiandra GD", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(94, 200);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(173, 29);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "Abrir la puerta.";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
+            this.label29.MouseEnter += new System.EventHandler(this.label29_MouseEnter);
+            this.label29.MouseLeave += new System.EventHandler(this.label29_MouseLeave);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Maiandra GD", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(41, 108);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(511, 39);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "en encontrar el regalo. ¿Qué harás?";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Maiandra GD", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(41, 67);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(716, 39);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Están timbrando la casa pero tu estás concentrado";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Evento1);
+            this.Controls.Add(this.Lavandería);
+            this.Controls.Add(this.Stage3);
+            this.Controls.Add(this.Acertijo);
             this.Controls.Add(this.CocinaPanel1);
             this.Controls.Add(this.Stage2);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Stage1);
-            this.Controls.Add(this.Lavandería);
-            this.Controls.Add(this.Stage3);
-            this.Controls.Add(this.Acertijo);
             this.Name = "Form1";
             this.Text = "Form1";
             this.MainMenu.ResumeLayout(false);
@@ -1126,6 +1234,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.Evento1.ResumeLayout(false);
+            this.Evento1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1210,6 +1320,14 @@
         public System.Windows.Forms.Panel Acertijo;
         public System.Windows.Forms.Panel Stage3;
         public System.Windows.Forms.Panel Lavandería;
+        private System.Windows.Forms.Panel Evento1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label40;
     }
 }
 

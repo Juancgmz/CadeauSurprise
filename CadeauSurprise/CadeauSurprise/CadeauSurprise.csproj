@@ -46,29 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Baño.cs" />
-    <Compile Include="Clases\Cocina1.cs" />
-    <Compile Include="Clases\Cuartos.cs" />
-    <Compile Include="Clases\Dormitorio.cs" />
-    <Compile Include="Clases\Extras.cs" />
-    <Compile Include="Clases\Lavandería.cs" />
-    <Compile Include="Clases\LeerArchivo.cs" />
-    <Compile Include="Clases\Sala.cs" />
-    <Compile Include="Cosas\Almohada.cs" />
-    <Compile Include="Cosas\Cosas.cs" />
-    <Compile Include="Cosas\Cuchillo.cs" />
-    <Compile Include="Cosas\Estufa.cs" />
-    <Compile Include="Cosas\Jabón.cs" />
-    <Compile Include="Cosas\Laptop.cs" />
-    <Compile Include="Cosas\Lavadora.cs" />
-    <Compile Include="Cosas\Mesa.cs" />
-    <Compile Include="Cosas\Regadera.cs" />
-    <Compile Include="Cosas\Secadora.cs" />
-    <Compile Include="Cosas\Shampoo.cs" />
-    <Compile Include="Cosas\Silla.cs" />
-    <Compile Include="Cosas\Sillón.cs" />
-    <Compile Include="Cosas\Toalla.cs" />
-    <Compile Include="Cosas\TV.cs" />
+    <Compile Include="Clases\Lugares\Baño.cs" />
+    <Compile Include="Clases\Lugares\Cocina1.cs" />
+    <Compile Include="Clases\Lugares\Cuartos.cs" />
+    <Compile Include="Clases\Lugares\Dormitorio.cs" />
+    <Compile Include="Clases\Lugares\Extras.cs" />
+    <Compile Include="Clases\Lugares\Lavandería.cs" />
+    <Compile Include="Clases\Archivos\LeerArchivo.cs" />
+    <Compile Include="Clases\Lugares\Sala.cs" />
+    <Compile Include="Clases\Cosas\Almohada.cs" />
+    <Compile Include="Clases\Cosas\Cosas.cs" />
+    <Compile Include="Clases\Cosas\Cuchillo.cs" />
+    <Compile Include="Clases\Cosas\Estufa.cs" />
+    <Compile Include="Clases\Cosas\Jabón.cs" />
+    <Compile Include="Clases\Cosas\Laptop.cs" />
+    <Compile Include="Clases\Cosas\Lavadora.cs" />
+    <Compile Include="Clases\Cosas\Mesa.cs" />
+    <Compile Include="Clases\Cosas\Regadera.cs" />
+    <Compile Include="Clases\Cosas\Secadora.cs" />
+    <Compile Include="Clases\Cosas\Shampoo.cs" />
+    <Compile Include="Clases\Cosas\Silla.cs" />
+    <Compile Include="Clases\Cosas\Sillón.cs" />
+    <Compile Include="Clases\Cosas\Toalla.cs" />
+    <Compile Include="Clases\Cosas\TV.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +106,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Clases\Agregaciones\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CadeauSurprise.Clases
+namespace CadeauSurprise.Cosas
 {
-    class Lavandería : Cuartos
+    class Almohada : Cosas
     {
+        public static void AlmohadaPick()
+        {
+
+        }
     }
 }

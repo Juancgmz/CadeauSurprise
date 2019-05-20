@@ -36,6 +36,7 @@ namespace CadeauSurprise
             {
                 labelB.Text = BookCounter.ToString();
             }
+            
         }
 
         public void LoseRoomeLife()
@@ -130,8 +131,7 @@ namespace CadeauSurprise
 
         private void label17_Click(object sender, EventArgs e)
         {
-            label20.Show();
-            label21.Show();
+            Cosas.Silla.SillaPick();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -148,6 +148,8 @@ namespace CadeauSurprise
                 {
                     label1.Show();
                     PlayerName = textBox1.Text;
+                    label4.Text = "La mamá de " + PlayerName + " le tiene un regalo sorpresa por su cumpleaños.";
+                    label6.Text = "Tu misión es ayudar a " + PlayerName + "a encontrar su regalo ya que sólo puedes ir a 15 cuartos, si no, su mamá no le dará su regalo.";
                     button1.Hide();
                     textBox1.Enabled = false;
                     textBox2.Enabled = false;
@@ -167,8 +169,6 @@ namespace CadeauSurprise
         private void label11_Click(object sender, EventArgs e)
         {
             Cocina1.CocinaCorrecta1();
-            Stage2.Hide();
-            CocinaPanel1.Show();
         }
 
         private void label11_MouseEnter(object sender, EventArgs e)
@@ -257,8 +257,7 @@ namespace CadeauSurprise
 
         private void label12_Click(object sender, EventArgs e)
         {
-            CuartoEquivocado();
-            LoseRoomeLife();
+            Clases.Sala.SalaIncorrecta1();
         }
 
         public void CuartoEquivocado()
@@ -268,18 +267,17 @@ namespace CadeauSurprise
 
         private void label13_Click(object sender, EventArgs e)
         {
-            CuartoEquivocado();
-            LoseRoomeLife();
+            Clases.Lavandería.LavanderíaIncorrecta1();
         }
 
         private void label16_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¡Oops! Te equivocaste de objeto :( Intenta de nuevo.");
+            Cosas.Estufa.EstufaPick();
         }
 
         private void label18_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¡Oops! Te equivocaste de objeto :( Intenta de nuevo.");
+            Cosas.Cuchillo.CuchilloPick();
         }
 
         private void Stage2Timer_Tick(object sender, EventArgs e)
@@ -320,15 +318,12 @@ namespace CadeauSurprise
 
         private void label23_Click(object sender, EventArgs e)
         {
-            CuartoEquivocado();
-            LoseRoomeLife();
+            Clases.Sala.SalaIncorrecta1();
         }
 
         private void label14_Click(object sender, EventArgs e)
         {
-            Stage3.Hide();
-            Lavandería.Show();
-            LoseRoomeLife();
+            Clases.Lavandería.LavanderíaCorrecta1();
         }
 
         private void label14_MouseEnter(object sender, EventArgs e)
@@ -366,6 +361,7 @@ namespace CadeauSurprise
         private void label31_Click(object sender, EventArgs e)
         {
             Lavandería.Hide();
+            Evento1.Show();
         }
 
         private void label31_MouseEnter(object sender, EventArgs e)
@@ -415,6 +411,52 @@ namespace CadeauSurprise
         {
             this.Cursor = Cursors.Default;
             label36.Font = new Font(label36.Font.Name, label36.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+            label29.Enabled = false;
+            label37.Enabled = false;
+            label38.Show();
+            label40.Show();
+            AdquireMoney(500);
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+            label29.Enabled = false;
+            label37.Enabled = false;
+            label39.Show();
+            label40.Show();
+        }
+
+        private void label29_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label29.Font = new Font(label29.Font.Name, label29.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label29_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label29.Font = new Font(label29.Font.Name, label29.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label37_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            label37.Font = new Font(label37.Font.Name, label37.Font.SizeInPoints, FontStyle.Underline);
+        }
+
+        private void label37_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            label37.Font = new Font(label37.Font.Name, label37.Font.SizeInPoints, FontStyle.Regular);
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            Evento1.Hide();
         }
     }
 }
